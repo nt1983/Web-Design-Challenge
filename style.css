@@ -7,3 +7,9 @@
   }
 
 }
+tr{
+  text-align: left !important;
+}
+thead {
+  font-weight: bold;
+}
