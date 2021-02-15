@@ -9,114 +9,83 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="index.html">Latitude</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Visualization
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="max-temp.html">City Lat vs. Max Temprature</a>
-            <a class="dropdown-item" href="humidity.html">City Lat vs. Humidity</a>
-            <a class="dropdown-item" href="cloudiness.html">City Lat vs. Cloudiness</a>
-            <a class="dropdown-item" href="windspeed.html">City Lat vs. Wind Speed</a>
-          </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="comprison.html">Comparison</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="data.html" tabindex="-1">Data</a>
-        </li>
-      </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+                <span style="font-size:25px">Latitude</span>
+            </a>
+        </div>
+        <div class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavBar">
+            <span class="navbar-toggler-icon"></span>
+        </div>
+        <div class="collapse navbar-collapse" id="mainNavBar">
+            <ul class="nav navbar-nav ml-auto">                        
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Plots
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="max-temp.html">Max Temperature</a>
+                        <a class="dropdown-item" href="humidity.html">Humidity</a>
+                        <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+                        <a class="dropdown-item" href="windspeed.html">Wind Speed</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="comparison.html">Comparison</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="data.html">Data</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </nav>
+</nav>
 
-  <div class="container">
+<div class="container-fluid" style="padding:100px">
     <div class="row">
-      <div class="col-md-7">
-        <div class="jumbotron">
-          <h3 class="display-5">Summary: Latitude vs. X</h3>
-          <hr class="my-4">
-          <div class="media">
-            <div class="media-left">
-              <a href="Resources\assets\images\Fig1.png">
-                <img class="media-object" src="Resources\assets\images\Fig1.png" alt="Latitude vs. Max Temprature" style="width: 200px; height: 200px;">
-              </a>
+        <div class="col-md-7 col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Summary: Latitude vs. X.</h2>
+                    <hr>
+                    <div class = "box">
+                        <img class="img-fluid" src="Resources\assets\images\Fig1.png" alt="Max Temp"  style="float:left" height ="300" width="300">
+                        <p class="text1">The purpose of this project was to analyze weather changes moving closer to the equator. This was accomplished by 
+                            analyzing data from the OpenWeatherMap API, creating a dataset on more than 500 cities. 
+                        <br>
+                        <br>
+                        Matplotlib was used to plot aspects of the weather vs. latitude... temperature, cloudiness, wind speed, and humidity. Visualizations of the analysis are provided along with explanations of correlations.                            </p>
+                    </div> 
+                </div>
             </div>
-              <div class="media-body"> 
-                The purpose of this project was to analyze weather changes moving closer to the equator. This was accomplished by 
-                analyzing data from the OpenWeatherMap API, creating a dataset on more than 500 cities.
-                <br>
-                After assembling the dataset, we used Matplotlib to pilot Various aspects of weather vs. latitude. Factors we looked
-                at included: temraturare, cloudiness, wind speedand humidity. This site provides the source data and visualization 
-                created as part of the analysis as well as explanations and descriptions os any trends and correlations witnessed.
-              </div>
-            </div>
-          </div>
         </div>
+
         <div class="col-md-5">
-          <div class="jumbotron">
-            <h4 class="display-5">Visualization</h4>
-            <hr class="my-4">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="media">
-                  <div class="media-left">
-                    <a href="max-temp.html">
-                      <img class="media-object" src="Resources\assets\images\Fig1.png" alt="Latitude vs. Max Temprature" style="width: 150px; height: 150px;">
-                    </a>           
-                  </div>
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Visualizations</h3>
+                    <hr>
+                    <div class ="text-center">
+                        <div>
+                            <a href="max-temp.html" >
+                                <img src="Resources\assets\images\Fig1.png" alt="Max Temp" class="img-fluid" height ="200" width="200">
+                            </a>
+                            <a href="humidity.html" >
+                                <img src="Resources\assets\images\Fig2.png" alt="Humidity" class="img-fluid" height ="200" width="200">
+                            </a>
+                            <a href="cloudiness.html" >
+                                <img src="Resources\assets\images\Fig3.png" alt="Cloudiness" class="img-fluid" height ="200" width="200">
+                            </a>
+                            <a href="windspeed.html" >
+                                <img src="Resources\assets\images\Fig4.png" alt="Wind Speed" class="img-fluid" height ="200" width="200">
+                            </a>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="col-md-6">
-                <div class="media">
-                  <div class="media-left">
-                    <a href="humidity.html">
-                      <img class="media-object" src="Resources\assets\images\Fig2.png" alt="Latitude vs. Humidity" style="width: 150px; height: 150px;">
-                    </a>           
-                  </div>
-                </div>
-              </div>
             </div>
-            <br>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="media">
-                  <div class="media-left">
-                    <a href="cloudiness.html">
-                      <img class="media-object" src="Resources\assets\images\Fig3.png" alt="Latitude vs. Cloudiness" style="width: 150px; height: 150px;">
-                    </a>           
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="media">
-                  <div class="media-left">
-                    <a href="windspeed.html">
-                      <img class="media-object" src="Resources\assets\images\Fig4.png" alt="Latitude vs. Wind Speed" style="width: 150px; height: 150px;">
-                    </a>           
-                  </div>
-                </div>
-              </div>
-
-            </div>
-  
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-
-
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
