@@ -44,7 +44,7 @@ html_nav="""<!DOCTYPE html>
         </div>
     </div>
 </nav>
-<div class="content">
+<div class="table-responsive">
   <div class="col-sm-12 col-md-12" >
       <h2 class="text-left">Data</h2>
               <hr>
@@ -62,7 +62,7 @@ html_end="""
 city=pd.read_csv("Resources\cities.csv")
 city=city.set_index('City_ID',drop=True)
 print(city.head())
-city_html=city.to_html(classes='table table-striped table-fluid')
+city_html=city.to_html(classes='table')
 text_file = open("data.html", "w") 
 text_file.write(html_nav) 
 text_file.write(city_html) 
